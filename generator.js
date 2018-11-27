@@ -5,10 +5,12 @@ function startGenerator() {
     generateAge();
     generateHair();
     generateEyes();
+	generateBust();
     generateAttribute();
     generateCharacter();
     generateCup();
     generateSkin();
+	generateImage();
 }
 
 function generateCup() {
@@ -17,6 +19,13 @@ function generateCup() {
 
 function generateSkin() {
     randomData("skin",Skin_data);
+}
+
+function generateBust() {
+	var bust = normalDistribution(35, 5)
+	bust = Math.round(bust);
+	var text1 = document.getElementById("bust");
+	text1.innerHTML = bust;
 }
 
 function generateBody() {
@@ -53,6 +62,9 @@ function generateAttribute() {
 function generateCharacter() {  
     randomData("character",Character_data);
 }
+function generateImage() {
+	randomImage("image", Image_data);
+}
 
 function normalDistribution(u, v) {
     // Box-Muller
@@ -77,4 +89,10 @@ function randomData(elementId,dataName) {
     var t1Num = Math.floor(Math.random()*dataName.length);
     var text1 = document.getElementById(elementId);
     text1.innerHTML = dataName[t1Num];    
+}
+function randomImage(elementId,dataName) {
+    var t1Num = Math.floor(Math.random()*dataName.length);
+    var text1 = document.getElementById(elementId);
+    var imageName = dataName[t1Num];    
+	text1.src = "../Random-waifu-generater/" + imageName + "";
 }

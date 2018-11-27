@@ -95,6 +95,7 @@ Cupsize_data = [
     "G"
 ];
 
+
 Skin_data = [
     "洁白",
     "正常",
@@ -107,3 +108,12 @@ Skin_data = [
     "正常",
     "黑妹"
 ];
+
+Image_data = [
+	"EJ.jpg",
+	"Ym.jpg",
+	"FengJie.jpg",
+	"Gyy.jpg",
+	"Dlrb.jpg",
+	"Emma.jpg",
+]
